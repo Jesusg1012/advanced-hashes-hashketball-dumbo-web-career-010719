@@ -112,7 +112,7 @@ def num_points_scored(name)
   hash = game_hash()
   hash.each do |team, team_data|
         if team_data[:players].has_key?(name)
-          return data[name][:points]
+          return team_data[:player][name][:points]
   end
 end
 end
